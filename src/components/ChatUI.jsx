@@ -33,7 +33,7 @@ export default function ChatUI() {
     setIsTyping(true);
 
     try {
-      const res = await axios.post("https://chatbot-backend-production-03b4.up.railway.app/", { message: input });
+      const res = await axios.post("https://chatbot-backend-production-03b4.up.railway.app/ask", { message: input });
 
       const botText = res.data.response;
       const botMsg = {
